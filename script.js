@@ -1,50 +1,8 @@
 // Portfolio Website JavaScript
 
-// Data for skills and projects
 // Portfolio Website JavaScript
 
-// Data for skills and projects
-const skillsData = {
-    frontend: [
-        { name: "React", level: 95, icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
-        { name: "Next.js", level: 90, icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original-wordmark.svg" },
-        { name: "TypeScript", level: 88, icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" },
-        { name: "Tailwind CSS", level: 92, icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" },
-        { name: "Flutter", level: 85, icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" },
-        { name: "JavaScript", level: 95, icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" }
-    ],
-    backend: [
-        { name: "Node.js", level: 90, icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
-        { name: "Django", level: 80, icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" },
-        { name: "Express.js", level: 88, icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" },
-        { name: "Dart", level: 92, icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg" },
-        { name: "Spring Boot", level: 80, icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" },
-        { name: ".NET", level: 82, icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dot-net/dot-net-original.svg" }
-    ],
-    database: [
-        { name: "MySQL", level: 88, icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" },
-        { name: "MongoDB", level: 85, icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" },
-        { name: "Firebase", level: 78, icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" },
-        { name: "NoSQL", level: 82, icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" },
-        { name: "SQL", level: 85, icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" }
-    ],
-    tools: [
-        { name: "Git", level: 95, icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" },
-        { name: "Docker", level: 85, icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" },
-        { name: "VS Code", level: 98, icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" },
-        { name: "GitHub", level: 80, icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" },
-        { name: "Postman", level: 90, icon: "https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg" },
-        { name: "Render", level: 75, icon: "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/render.svg" }
-    ],
-    Programming: [
-        { name: "C", level: 85, icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" },
-        { name: "C++", level: 80, icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" },
-        { name: "Java", level: 90, icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" },
-        { name: "Python", level: 85, icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
-        { name: "HTML", level: 95, icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" },
-        { name: "CSS", level: 90, icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" },
-    ]
-};
+// Data for projects
 
 const projectsData = [
     {
@@ -84,13 +42,10 @@ const projectsData = [
 ];
 
 // DOM Elements
-const skillsGrid = document.getElementById('skillsGrid');
 const projectsGrid = document.getElementById('projectsGrid');
-const categoryBtns = document.querySelectorAll('.category-btn');
 
 // Initialize the page
 document.addEventListener('DOMContentLoaded', function() {
-    initializeSkills();
     initializeProjects();
     initializeNavigation();
     initializeAnimations();
@@ -99,41 +54,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeContactForm();
 });
 
-// Initialize Skills Section
-function initializeSkills() {
-    // Show frontend skills by default
-    displaySkills('frontend');
-    
-    // Add event listeners to category buttons
-    categoryBtns.forEach(btn => {
-        btn.addEventListener('click', function() {
-            const category = this.dataset.category;
-            
-            // Update active button
-            categoryBtns.forEach(b => b.classList.remove('active'));
-            this.classList.add('active');
-            
-            // Display skills for selected category
-            displaySkills(category);
-        });
-    });
-}
 
-// Display Skills for a specific category
-function displaySkills(category) {
-    const skills = skillsData[category];
-    
-    skillsGrid.innerHTML = skills.map(skill => `
-        <div class="skill-card" data-aos="fade-up">
-            <div class="skill-header">
-                <div class="skill-name">
-                    <img src="${skill.icon}" alt="${skill.name}" class="skill-icon" />
-                    <span>${skill.name}</span>
-                </div>
-            </div>
-        </div>
-    `).join('');
-}
 
 // Initialize Projects Section
 function initializeProjects() {
