@@ -1,0 +1,24 @@
+{
+  "name": "diya-portfolio",
+  "version": "1.0.0",
+  "description": "Diya Patel's Creative Developer Portfolio",
+  "main": "index.html",
+  "scripts": {
+    "start": "echo 'Static site - no build required'",
+    "build": "echo 'Static site - no build required'"
+  },
+  "keywords": [
+    "portfolio",
+    "web-development",
+    "static-site",
+    "html",
+    "css",
+    "javascript"
+  ],
+  "author": "Diya Patel",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Pdiya13/diya_portfolio"
+  }
+} 
