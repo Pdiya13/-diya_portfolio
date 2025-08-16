@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', function() {
 function initializeProjects() {
     projectsGrid.innerHTML = projectsData.map(project => `
         <div class="project-card" data-aos="fade-up">
-            <img src="${project.image}" alt="${project.title}" class="project-image">
+         <!-- <img src="${project.image}" alt="${project.title}" class="project-image"> -->
             <div class="project-content">
                 <h3 class="project-title">${project.title}</h3>
                 <p class="project-description">${project.description}</p>
