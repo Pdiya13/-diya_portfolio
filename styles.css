@@ -1551,6 +1551,24 @@ section {
 .achievements .section-title {
     color: #ffffff !important;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    font-size: 3rem !important;
+    font-weight: 800 !important;
+    margin-bottom: 1rem !important;
+}
+
+.achievements .section-header {
+    position: relative;
+    z-index: 10;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    margin-bottom: 4rem !important;
+    background: rgba(0, 0, 0, 0.8) !important;
+    padding: 2rem !important;
+    border-radius: 16px !important;
 }
 
 .achievements::before {
