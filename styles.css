@@ -468,6 +468,8 @@ section {
     font-weight: 800;
     color: #ffffff;
     margin-bottom: 1rem;
+    position: relative;
+    z-index: 10;
 }
 
 .highlight {
@@ -1539,6 +1541,16 @@ section {
     background: rgba(0, 0, 0, 0.95);
     position: relative;
     overflow: hidden;
+}
+
+.achievements .section-header {
+    position: relative;
+    z-index: 10;
+}
+
+.achievements .section-title {
+    color: #ffffff !important;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .achievements::before {
